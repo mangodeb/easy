@@ -118,7 +118,7 @@ class Graph {
                 int weight = edge.weight;
 
                 int newDistanceFromSource = distanceFromSource + weight;
-                if (dist[v] > distanceFromSource) {
+                if (dist[v] > newDistanceFromSource) {
                     dist[v] = newDistanceFromSource;
                     pq.offer(new Node(v, dist[v]));
                 }
@@ -149,7 +149,7 @@ class Prims {
 
         @Override
         public int compareTo(Prims.Node arg0) {
-            return Integer.compare(this.vertex, arg0.vertex);
+            return Integer.compare(this.weight, arg0.weight);
         }
     }
 
@@ -202,7 +202,9 @@ class Prims {
                 totalWeight += node.weight;
 
                 for(Edge edge : adjList.get(node.vertex)) {
-                    pq.offer(new Node(edge.to, edge.weight));
+                    if (!visited[edge.to]) {
+                        pq.offer(new Node(edge.to, edge.weight));
+                    }
                 }
             }
 

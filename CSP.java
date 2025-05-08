@@ -1,6 +1,7 @@
 public class CSP {
     public static void main(String[] args) {
-        BackTracking bt = new BackTracking(0);
+        // BackTracking bt = new BackTracking(0);
+        BranchBound bb = new BranchBound(0);
 
     }
 }
