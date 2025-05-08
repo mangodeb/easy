@@ -1,0 +1,12 @@
+| Algorithm               | Time Complexity      | Space Complexity |
+| ----------------------- | -------------------- | ---------------- |
+| **A* Algorithm*\*       | O(b^d)               | O(b^d)           |
+| **BFS**                 | O(V + E)             | O(V)             |
+| **DFS**                 | O(V + E)             | O(V)             |
+| **Branch and Bound**    | O(b^d)               | O(b \* d)        |
+| **Backtracking**        | O(b^d)               | O(d)             |
+| **Greedy Algorithm**    | O(n log n) or O(n)   | O(n)             |
+| **Prim’s Algorithm**    | O(V^2) or O(E log V) | O(V)             |
+| **Kruskal’s Algorithm** | O(E log E)           | O(V)             |
+| **Job Scheduling**      | O(n log n)           | O(n)             |
+

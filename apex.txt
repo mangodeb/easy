@@ -1,0 +1,138 @@
+public class ArrayAddition {
+    public static void addArrays() {
+        Integer[] arr1 = new Integer[]{1, 2, 3};
+        Integer[] arr2 = new Integer[]{4, 5, 6};
+        Integer[] sumArr = new Integer[arr1.size()];
+        
+        for (Integer i = 0; i < arr1.size(); i++) {
+            sumArr[i] = arr1[i] + arr2[i];
+        }
+        
+        System.debug('Sum Array: ' + sumArr);
+    }
+}
+
+
+public class GeometryArea {
+    public static void calculateAreas() {
+        Double radius = 5;
+        Double circleArea = Math.PI * radius * radius;
+        
+        Double length = 10, width = 4;
+        Double rectangleArea = length * width;
+        
+        Double base = 6, height = 3;
+        Double triangleArea = 0.5 * base * height;
+        
+        System.debug('Circle: ' + circleArea);
+        System.debug('Rectangle: ' + rectangleArea);
+        System.debug('Triangle: ' + triangleArea);
+    }
+}
+
+
+public class CurrencyConverter {
+    public static void convertCurrency() {
+        Double usd = 100;
+        Double conversionRate = 82.5; // USD to INR
+        Double inr = usd * conversionRate;
+        System.debug('INR: ' + inr);
+    }
+}
+
+
+public class InterestCalculator {
+    public static void calculateInterest() {
+        Double p = 1000, r = 5, t = 2;
+        Double si = (p * r * t) / 100;
+        Double ci = p * Math.pow(1 + r/100, t) - p;
+        
+        System.debug('Simple Interest: ' + si);
+        System.debug('Compound Interest: ' + ci);
+    }
+}
+
+
+public class TemperatureConverter {
+    public static void convertTemp() {
+        Double celsius = 30;
+        Double fahrenheit = (celsius * 9/5) + 32;
+        System.debug('Fahrenheit: ' + fahrenheit);
+    }
+}
+
+public class PrimeChecker {
+    public static void isPrime(Integer num) {
+        if (num < 2) {
+            System.debug(num + ' is not prime');
+            return;
+        }
+        for (Integer i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                System.debug(num + ' is not prime');
+                return;
+            }
+        }
+        System.debug(num + ' is prime');
+    }
+}
+
+public class Fibonacci {
+    public static void printFibonacci(Integer n) {
+        Integer a = 0, b = 1, c;
+        System.debug(a + ', ' + b);
+        for (Integer i = 2; i < n; i++) {
+            c = a + b;
+            System.debug(c);
+            a = b;
+            b = c;
+        }
+    }
+}
+
+
+public class MatrixAddition {
+    public static void addMatrices() {
+        Integer[][] mat1 = {{1, 2}, {3, 4}};
+        Integer[][] mat2 = {{5, 6}, {7, 8}};
+        Integer[][] result = new Integer[2][2];
+        
+        for (Integer i = 0; i < 2; i++) {
+            for (Integer j = 0; j < 2; j++) {
+                result[i][j] = mat1[i][j] + mat2[i][j];
+            }
+        }
+        
+        System.debug('Matrix Addition Result: ' + result);
+    }
+}
+
+
+public class MatrixMultiplication {
+    public static void multiplyMatrices() {
+        Integer[][] mat1 = {{1, 2}, {3, 4}};
+        Integer[][] mat2 = {{2, 0}, {1, 2}};
+        Integer[][] result = new Integer[2][2];
+        
+        for (Integer i = 0; i < 2; i++) {
+            for (Integer j = 0; j < 2; j++) {
+                result[i][j] = 0;
+                for (Integer k = 0; k < 2; k++) {
+                    result[i][j] += mat1[i][k] * mat2[k][j];
+                }
+            }
+        }
+        
+        System.debug('Matrix Multiplication Result: ' + result);
+    }
+}
+
+public class SimpleCalculator {
+    public static void calculate(Double a, Double b, String op) {
+        if (op == '+') System.debug('Sum: ' + (a + b));
+        else if (op == '-') System.debug('Difference: ' + (a - b));
+        else if (op == '*') System.debug('Product: ' + (a * b));
+        else if (op == '/') System.debug(b != 0 ? 'Quotient: ' + (a / b) : 'Cannot divide by zero');
+        else System.debug('Invalid Operator');
+    }
+}
